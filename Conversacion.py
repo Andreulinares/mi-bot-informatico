@@ -16,8 +16,10 @@ clave = st.secrets["GEMINI_API_KEY"]
 
 @st.cache_resource
 def obtener_cliente(api_key):
-    
-    return genai.Client(api_key=api_key)
+    # SOLUCIÓN AL 401: Forzamos la cabecera HTTP exacta para que acepte la clave 'AQ.' de forma limpia
+    return genai.Client(
+        http_options={"headers": {"x-goog-api-key": api_key}}
+    )
 
 
 if not clave:
