@@ -10,10 +10,9 @@ st.title("Mi bot informatico")
 load_dotenv()
 
 
-if "GEMINI_API_KEY" in st.secrets:
-    clave = st.secrets["GEMINI_API_KEY"]
-else:
-    clave = os.getenv("GEMINI_API_KEY")
+
+clave = st.secrets["GEMINI_API_KEY"]
+
 
 @st.cache_resource
 def obtener_cliente(api_key):
