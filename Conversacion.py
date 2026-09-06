@@ -54,7 +54,7 @@ if mensaje_usuario := st.chat_input("Escribe tu mensaje"):
             try:
                 
                 respuesta = cliente.models.generate_content(
-                    model="gemini-2.5-flash",
+                    model="gemini-3.6-flash",
                     contents=st.session_state.historial,
                     config=types.GenerateContentConfig(
                         system_instruction=instruccion,
