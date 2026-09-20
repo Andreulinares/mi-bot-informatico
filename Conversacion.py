@@ -12,7 +12,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
 MAX_MENSAJES = 20
 
-st.title("Mi bot informatico")
+st.title("Mi Bot Informatico")
 
 load_dotenv()
 clave = st.secrets["GEMINI_API_KEY"]
