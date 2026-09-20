@@ -15,7 +15,8 @@ MAX_MENSAJES = 20
 st.title("Mi Bot Informatico")
 
 load_dotenv()
-clave = st.secrets["GEMINI_API_KEY"]
+
+clave = os.environ.get("GEMINI_API_KEY")
 
 history = StreamlitChatMessageHistory(key="chat_messages")
 
